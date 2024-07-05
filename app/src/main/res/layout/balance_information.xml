@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#101314"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/tv_cross_bal_info"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:drawableEnd="@drawable/icons8_cross_30"
+        android:gravity="center|fill"
+        android:text="Balance Information"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_dot"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/icon_dot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_bal_point1" />
+
+    <TextView
+        android:id="@+id/tv_bal_point1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="On Pi42, all USDT pair contracts are   notionally quoted, margined, and settled in USDT"
+        android:textColor="#89A0AE"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_dot"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cross_bal_info" />
+
+    <ImageView
+        android:id="@+id/img_dot2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/icon_dot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_bal_point2" />
+
+    <TextView
+        android:id="@+id/tv_bal_point2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="However, the USDT-INR rate on the platform is fixed (for margin calculation), and user balances are maintained in INR."
+        android:textColor="#89A0AE"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_dot2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bal_point1" />
+
+    <ImageView
+        android:id="@+id/img_dot3"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/icon_dot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_bal_point3" />
+
+    <TextView
+        android:id="@+id/tv_bal_point3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="This means that users are not exposed to any risks from the fluctuation of the actual USDT-INR exchange rate. (edited) "
+        android:textColor="#89A0AE"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_dot3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bal_point2" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_rate_change"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bal_point3">
+
+        <TextView
+            android:id="@+id/tv_tittle_rate_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rate of change"
+            android:textColor="#DBE7FF"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_rate_Charge_amt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text=" 88.12"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_tittle_rate_change"
+            app:layout_constraintStart_toEndOf="@+id/tv_tittle_rate_change"
+            app:layout_constraintTop_toTopOf="@+id/tv_tittle_rate_change" />
+
+        <ImageView
+            android:id="@+id/img_exchange_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/exchange_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_rate_Charge_amt"
+            app:layout_constraintStart_toEndOf="@+id/tv_rate_Charge_amt"
+            app:layout_constraintTop_toTopOf="@+id/tv_rate_Charge_amt" />
+
+        <TextView
+            android:id="@+id/tv_realTimeVal_usdt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="1 USDT"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_exchange_icon"
+            app:layout_constraintStart_toEndOf="@+id/img_exchange_icon"
+            app:layout_constraintTop_toTopOf="@+id/img_exchange_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_ur_aval_bal"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_tv_fill"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_rate_change">
+
+        <TextView
+            android:id="@+id/tv_tittle_bal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Your Available balance"
+            android:textAlignment="center"
+            android:textColor="#DBE7FF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_avail_bal_usdt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/usdtusdt_icon"
+            android:drawablePadding="5dp"
+            android:text="10000 USDT"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/img_simi_to_icon"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tittle_bal" />
+
+        <ImageView
+            android:id="@+id/img_simi_to_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/similar_to_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_tittle_bal"
+            app:layout_constraintStart_toStartOf="@+id/tv_tittle_bal"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tittle_bal" />
+
+        <TextView
+            android:id="@+id/tv_realTimeVal_amt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/rupee_icon"
+            android:drawablePadding="5dp"
+            android:text=" 88,00,000.12"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_simi_to_icon"
+            app:layout_constraintStart_toEndOf="@+id/img_simi_to_icon"
+            app:layout_constraintTop_toTopOf="@+id/img_simi_to_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_bal_info_ok"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Okay"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_ur_aval_bal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
