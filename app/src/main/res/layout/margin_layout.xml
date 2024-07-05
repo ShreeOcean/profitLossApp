@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#101314"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/tv_cross_margin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:drawableEnd="@drawable/icons8_cross_30"
+        android:gravity="center|fill"
+        android:text="Margin"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_margin_explained"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:text="Margin in futures trading is the amount of money a trader must deposit with their broker to open a futures position."
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cross_margin" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_margin_explained">
+
+        <TextView
+            android:id="@+id/tv_realTimeVal_tittle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/real_time_val_icon"
+            android:drawablePadding="5dp"
+            android:text="Real Time Value"
+            android:textColor="#DBE7FF"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/tv_realTimeVal_amt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="90dp"
+            android:drawableStart="@drawable/rupee_icon"
+            android:drawablePadding="5dp"
+            android:text=" 88.12"
+            android:textColor="#DBE7FF"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_realTimeVal_tittle"
+            app:layout_constraintEnd_toStartOf="@+id/img_exchange_icon"
+            app:layout_constraintTop_toTopOf="@+id/tv_realTimeVal_tittle" />
+
+        <ImageView
+            android:id="@+id/img_exchange_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/exchange_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_realTimeVal_amt"
+            app:layout_constraintEnd_toStartOf="@+id/tv_realTimeVal_usdt"
+            app:layout_constraintTop_toTopOf="@+id/tv_realTimeVal_amt" />
+
+        <TextView
+            android:id="@+id/tv_realTimeVal_usdt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/usdtusdt_icon"
+            android:drawablePadding="5dp"
+            android:text="USDT"
+            android:textColor="#DBE7FF"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_exchange_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/img_exchange_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
