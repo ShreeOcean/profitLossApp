@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#031F1C"
+    android:background="#101314"
     android:padding="15dp">
 
     <TextView
@@ -23,7 +23,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_market_order"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/bg_tv_fill"
         android:padding="15dp"
@@ -93,11 +93,12 @@
             android:layout_width="match_parent"
             android:background="@drawable/bg_tv_fill"
             android:padding="15dp"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/cl_market_order"
             tools:layout_editor_absoluteX="15dp"
             android:layout_marginTop="20dp">
 
+            <!-- img_icon_limit_ordr src to be changed as required -->
             <ImageView
                 android:id="@+id/img_icon_limit_ordr"
                 android:layout_width="wrap_content"

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#031F1C"
+    android:background="#101314"
     android:padding="15dp">
 
     <TextView
@@ -24,13 +24,188 @@
         android:id="@+id/tv_note1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginTop="20dp"
         android:gravity="center|fill"
         android:text="Please note that adjusting the leverage will affect all positions and active orders under the current pair."
         android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cross" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_realize_amt"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_tv_fill"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_note1">
+
+        <ImageView
+            android:id="@+id/imgBtnMinusAdjustLev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="Minus to adjust leverage"
+            android:focusable="true"
+            android:src="@drawable/minus"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_rupelogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="2x"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgBtnPlusAdjustLev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="Plus to adjust leverage"
+            android:focusable="true"
+            android:src="@drawable/plus"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_dummy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/tv_cross"
-        tools:layout_editor_absoluteX="15dp" />
+        android:text="set the bar over here"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_realize_amt" />
 
+    <TextView
+        android:id="@+id/tv_maxPositnCurntLev"
+        android:layout_width="204dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Max Position at Current Leverage"
+        android:textColor="#B3B3B3"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dummy" />
 
+    <TextView
+        android:id="@+id/tv_maxPositnCurntLevAmt"
+        android:layout_width="204dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="₹ 88,00,000"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_maxPositnCurntLev"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_maxPositnCurntLev"
+        app:layout_constraintTop_toTopOf="@+id/tv_maxPositnCurntLev" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_what_lev"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_tv_fill"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_wrning_lev_select">
+
+        <TextView
+            android:id="@+id/tv_whtLeverage"
+            android:layout_width="204dp"
+            android:layout_height="wrap_content"
+            android:text="What is Leverage?"
+            android:textColor="#B3B3B3"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgBtnDropDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_drop_down_24"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_whtLeverage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_whtLeverage" />
+
+        <TextView
+            android:id="@+id/tv_whtLeverageBody"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:text="Leverage allows you to borrow funds from Pi42 to increase your trading position. This means that you can control a larger position with a smaller amount of capital. This can amplify your profits if the market moves in your favor, but it can also amplify your losses"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_whtLeverage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Confirm"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_what_lev" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_wrning_lev_select"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_tv_fill_wrning"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_maxPositnCurntLev">
+
+        <ImageView
+            android:id="@+id/imgI_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/i_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_set_high_lev"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_set_high_lev" />
+
+        <TextView
+            android:id="@+id/tv_set_high_lev"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Selecting higher leverage such as {10x} increases your liquidation risk. Always manage your risk levels."
+            android:textColor="#F35A38"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgI_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

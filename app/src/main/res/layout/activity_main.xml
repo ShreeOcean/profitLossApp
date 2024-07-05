@@ -5,12 +5,12 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#031F1C"
+    android:background="#101314"
     android:padding="15dp"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tv_cross"
+        android:id="@+id/tv_cross_set_pl"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:drawableEnd="@drawable/icons8_cross_30"
@@ -32,7 +32,7 @@
         android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_cross" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_cross_set_pl" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/buyBtn"
@@ -65,6 +65,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/btn5x"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -200,42 +201,46 @@
         app:layout_constraintTop_toBottomOf="@+id/orderTypeCL" />
 
     <TextView
-        android:id="@+id/tvHeading1"
+        android:id="@+id/tvHead_realize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Price at which you want to "
         android:textColor="#B3B3B3"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <TextView
-        android:id="@+id/tvHead1_tittle"
+        android:id="@+id/tvBody_realize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Realize Profit."
         android:textColor="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/tvHeading1"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/tvHead_realize"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
+        android:id="@+id/cl_realize_amt"
         android:layout_width="204dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/bg_tv_fill"
         android:padding="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHeading1">
+        app:layout_constraintTop_toBottomOf="@+id/tvHead_realize">
 
-        <TextView
+        <EditText
             android:id="@+id/amount1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
             android:text="20,22,500.90"
             android:textColor="@color/white"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_rupelogo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -259,9 +264,9 @@
         android:layout_height="wrap_content"
         android:gravity="end"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
+        app:layout_constraintBottom_toBottomOf="@+id/cl_realize_amt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/constraintLayout2">
+        app:layout_constraintTop_toTopOf="@+id/cl_realize_amt">
 
         <TextView
             android:id="@+id/tvTitle1"
@@ -308,7 +313,7 @@
         android:background="#616161"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/cl_realize_amt" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout4"
@@ -349,13 +354,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvHeading2">
 
-            <TextView
+            <EditText
                 android:id="@+id/amount2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
                 android:text="20,22,500.90"
                 android:textColor="@color/white"
+                android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv2_rupelogo"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -399,8 +406,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:gravity="center"
-                android:text="₹ 10,50,300.90"
-                android:textColor="#00FF0A"
+                android:text="₹ 240.90"
+                android:textColor="#F35A38"
                 android:textSize="10sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -411,8 +418,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:gravity="center"
-                android:text="(32.00%)"
-                android:textColor="#00FF0A"
+                android:text="(2.00%)"
+                android:textColor="#F35A38"
                 android:textSize="10sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -432,23 +439,23 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
 
     <Button
-        android:id="@+id/btn1"
+        android:id="@+id/btnReset"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:text="Reset"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn2"
+        app:layout_constraintEnd_toStartOf="@+id/btnConfirm"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view3" />
 
     <Button
-        android:id="@+id/btn2"
+        android:id="@+id/btnConfirm"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:text="Confirm"
-        app:layout_constraintBottom_toBottomOf="@+id/btn1"
+        app:layout_constraintBottom_toBottomOf="@+id/btnReset"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn1"
-        app:layout_constraintTop_toTopOf="@+id/btn1" />
+        app:layout_constraintStart_toEndOf="@+id/btnReset"
+        app:layout_constraintTop_toTopOf="@+id/btnReset" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
