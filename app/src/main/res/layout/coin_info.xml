@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#101314">
+
+    <TextView
+        android:id="@+id/tv_cross_coin_info"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:drawableEnd="@drawable/icons8_cross_30"
+        android:gravity="center|fill"
+        android:text="Coin Info"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#181F23"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cross_coin_info" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="15dp"
+        android:padding="15dp"
+        android:background="@drawable/bg_tv_only_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <TextView
+            android:id="@+id/tv_bitcoin_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rank 1"
+            android:layout_marginStart="20dp"
+            android:textColor="#89A0AE"
+            app:layout_constraintEnd_toEndOf="@+id/tv_btcoin_tittle"
+            app:layout_constraintStart_toStartOf="@+id/tv_btcoin_tittle"
+            app:layout_constraintTop_toBottomOf="@+id/tv_btcoin_tittle" />
+
+        <TextView
+            android:id="@+id/tv_btcoin_tittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/icons8_bitcoin_30"
+            android:gravity="center|fill"
+            android:text="Bitcoin"
+            android:textColor="#DBE7FF"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_24th_turnOver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24h Turnover"
+            android:textColor="#89A0AE"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_bitcoin_rank" />
+
+        <TextView
+            android:id="@+id/tv_24th_turnOver_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2991.232M USDT"
+            android:textColor="#DBE7FF"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_24th_turnOver"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_24th_turnOver" />
+
+        <TextView
+            android:id="@+id/tv_24th_volume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24h Volume"
+            android:textColor="#89A0AE"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_24th_turnOver" />
+
+        <TextView
+            android:id="@+id/tv_24th_turnOver_vol_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15,323.22 BTC"
+            android:textColor="#DBE7FF"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_24th_volume"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_24th_volume" />
+
+        <TextView
+            android:id="@+id/tv_market_cap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Market Cap"
+            android:textColor="#89A0AE"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_24th_volume" />
+
+        <TextView
+            android:id="@+id/tv_market_cap_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ISOLATED"
+            android:textColor="#DBE7FF"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_market_cap"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_market_cap" />
+
+        <TextView
+            android:id="@+id/tv_fund_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Funding Rate"
+            android:textColor="#89A0AE"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_market_cap" />
+
+        <TextView
+            android:id="@+id/tv_24th_fund_rate_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-0.0035% in 24 minutes"
+            android:textColor="#DBE7FF"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_fund_rate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_fund_rate" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#3E5250"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fund_rate" />
+
+        <TextView
+            android:id="@+id/tv_global_vol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Global Volume"
+            android:textColor="#89A0AE"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+        <TextView
+            android:id="@+id/tv_global_vol_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(₹) 79,434 Cr."
+            android:textColor="#DBE7FF"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_global_vol"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_global_vol" />
+
+        <TextView
+            android:id="@+id/tv_market_domi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Market Dominance"
+            android:textColor="#89A0AE"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_global_vol" />
+
+        <TextView
+            android:id="@+id/tv_market_domi_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="53.98%"
+            android:textColor="#DBE7FF"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_market_domi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_market_domi" />
+
+        <TextView
+            android:id="@+id/tv_total_supply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Supply"
+            android:textColor="#89A0AE"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_market_domi" />
+
+        <TextView
+            android:id="@+id/tv_total_supply_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="19.72M BTC"
+            android:textColor="#DBE7FF"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_total_supply"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_total_supply" />
+
+        <TextView
+            android:id="@+id/tv_max_supply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Max Supply"
+            android:textColor="#89A0AE"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_total_supply" />
+
+        <TextView
+            android:id="@+id/tv_max_supply_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="21M BTC"
+            android:textColor="#DBE7FF"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_max_supply"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_max_supply" />
+
+        <TextView
+            android:id="@+id/tv_circle_supply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Circulating Supply"
+            android:textColor="#89A0AE"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_max_supply" />
+
+        <TextView
+            android:id="@+id/tv_circle_supply_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="19.54M BTC (100%)"
+            android:textColor="#DBE7FF"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_circle_supply"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_circle_supply" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#3E5250"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_circle_supply" />
+
+        <TextView
+            android:id="@+id/tv_all_time_high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All Time High"
+            android:textColor="#89A0AE"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+        <TextView
+            android:id="@+id/tv_all_time_high_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1₹ 67,43,434 (March 2024)"
+            android:textColor="#DBE7FF"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_all_time_high"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_all_time_high" />
+
+        <TextView
+            android:id="@+id/tv_lunched_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Launched in"
+            android:textColor="#89A0AE"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_all_time_high" />
+
+        <TextView
+            android:id="@+id/tv_lunched_in_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1₹ 67,43,434 (March 2024)"
+            android:textColor="#DBE7FF"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_lunched_in"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_lunched_in" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:paddingStart="30dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="30dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/bg_tv_fill"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lunched_in">
+
+            <TextView
+                android:id="@+id/tv_realTimeVal_tittle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/real_time_val_icon"
+                android:drawablePadding="5dp"
+                android:text="Real Time Value"
+                android:textColor="#DBE7FF"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/tv_realTimeVal_amt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:drawableStart="@drawable/rupee_icon"
+                android:drawablePadding="5dp"
+                android:text=" 88.12"
+                android:textColor="#DBE7FF"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_realTimeVal_tittle"
+                app:layout_constraintEnd_toStartOf="@+id/img_exchange_icon"
+                app:layout_constraintTop_toTopOf="@+id/tv_realTimeVal_tittle" />
+
+            <ImageView
+                android:id="@+id/img_exchange_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/exchange_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_realTimeVal_amt"
+                app:layout_constraintEnd_toStartOf="@+id/tv_realTimeVal_usdt"
+                app:layout_constraintTop_toTopOf="@+id/tv_realTimeVal_amt" />
+
+            <TextView
+                android:id="@+id/tv_realTimeVal_usdt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/usdtusdt_icon"
+                android:drawablePadding="5dp"
+                android:text="USDT"
+                android:textColor="#DBE7FF"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_exchange_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/img_exchange_icon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
