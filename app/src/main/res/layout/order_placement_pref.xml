@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#101314">
+
+    <TextView
+        android:id="@+id/tv_ordrbook_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#89A0AE"
+        android:textSize="10sp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:text="Your order quantity will be based on the value of your filled order. Note that extreme market fluctuations may cause order placement to fail."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_ordr_pref_val" />
+
+    <TextView
+        android:id="@+id/tv_cross_ordrBook_pref"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:drawableEnd="@drawable/icons8_cross_30"
+        android:gravity="center|fill"
+        android:text="Orderbook Preference"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#181F23"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cross_ordrBook_pref" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_ordr_qty_btc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" >
+
+        <TextView
+            android:id="@+id/tv_ord_qty_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order by Quantity  • "
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_btc_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BTC"
+            android:textColor="#03A9F4"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_ord_qty_title"
+            app:layout_constraintStart_toEndOf="@+id/tv_ord_qty_title"
+            app:layout_constraintTop_toTopOf="@+id/tv_ord_qty_title" />
+
+        <TextView
+            android:id="@+id/tv_qty_btc_body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Please enter your order quantity that is denominated in {Base Asset} terms"
+            android:textColor="#89A0AE"
+            android:textSize="12sp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/rdioBtn_qty_btc"
+            app:layout_constraintStart_toStartOf="@+id/tv_ord_qty_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ord_qty_title" />
+
+        <RadioButton
+            android:id="@+id/rdioBtn_qty_btc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_ordr_pref_val"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/white"
+        android:background="#181F23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_ordr_qty_btc" >
+
+        <TextView
+            android:id="@+id/tv_val_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order by Value • "
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_val_usdt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INR"
+            android:textColor="#03A9F4"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_val_title"
+            app:layout_constraintStart_toEndOf="@+id/tv_val_title"
+            app:layout_constraintTop_toTopOf="@+id/tv_val_title" />
+
+        <TextView
+            android:id="@+id/tv_val_usdt_body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Please enter your desired order value. You can modify that required margin by adjusting that applied leverage."
+            android:textColor="#89A0AE"
+            android:textSize="12sp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/rdioBtn_val_usdt"
+            app:layout_constraintStart_toStartOf="@+id/tv_val_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_val_usdt_title" />
+
+        <RadioButton
+            android:id="@+id/rdioBtn_val_usdt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_ordr_pref_confirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ordrbook_info" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
