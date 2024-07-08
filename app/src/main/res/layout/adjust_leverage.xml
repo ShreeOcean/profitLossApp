@@ -11,7 +11,7 @@
         android:id="@+id/tv_cross"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:drawableEnd="@drawable/icons8_cross_30"
+        android:drawableEnd="@drawable/cross_icon"
         android:gravity="center|fill"
         android:text="Adjust Leverage"
         android:textColor="@color/white"

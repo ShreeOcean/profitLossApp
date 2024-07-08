@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#101314">
+
+    <TextView
+        android:id="@+id/tv_cross_coin_info"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+        android:drawableEnd="@drawable/cross_icon"
+        android:gravity="center|fill"
+        android:text="Order Summary"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="#181F23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cross_coin_info" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:paddingBottom="20dp"
+        android:background="@drawable/bg_tv_fill_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <TextView
+            android:id="@+id/tv_realTimeVal_tittle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="40dp"
+            android:drawableStart="@drawable/btc"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text=" BTC-INR "
+            android:textColor="#DBE7FF"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_market_ordr_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_tv_fill_secnd"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_realTimeVal_tittle"
+            app:layout_constraintStart_toEndOf="@+id/tv_realTimeVal_tittle"
+            app:layout_constraintTop_toTopOf="@+id/tv_realTimeVal_tittle">
+
+            <TextView
+                android:id="@+id/tv_marke_ordr_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Market"
+                android:textAlignment="center"
+                android:textColor="#DBE7FF"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_short_ordr_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_short"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cl_market_ordr_sum"
+            app:layout_constraintStart_toEndOf="@+id/cl_market_ordr_sum"
+            app:layout_constraintTop_toTopOf="@+id/cl_market_ordr_sum">
+
+            <TextView
+                android:id="@+id/tv_short_ordr_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Short"
+                android:textAlignment="center"
+                android:textColor="#F35A38
+"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_50x_ordr_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_tv_fill_secnd"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cl_short_ordr_sum"
+            app:layout_constraintStart_toEndOf="@+id/cl_short_ordr_sum"
+            app:layout_constraintTop_toTopOf="@+id/cl_short_ordr_sum">
+
+            <TextView
+                android:id="@+id/tv_50x_ordr_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50x"
+                android:textAlignment="center"
+                android:textColor="#DBE7FF"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_ordr_sum_val_title"
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Value"
+            android:textAlignment="center"
+            android:textColor="#89A0AE"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_realTimeVal_tittle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_market_ordr_sum" />
+
+        <TextView
+            android:id="@+id/tv_ordr_sum_amt_title"
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:text="Amount"
+            android:textAlignment="center"
+            android:textColor="#89A0AE"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_ordr_sum_val_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cl_market_ordr_sum"
+            app:layout_constraintTop_toTopOf="@+id/tv_ordr_sum_val_title" />
+
+        <TextView
+            android:id="@+id/tv_ordr_sum_value"
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="₹ 1250.88"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_ordr_sum_val_title"
+            app:layout_constraintStart_toStartOf="@+id/tv_ordr_sum_val_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ordr_sum_val_title" />
+
+        <TextView
+            android:id="@+id/tv_ordr_sum_amt_val"
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:text="0.03BTC"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_ordr_sum_value"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cl_market_ordr_sum"
+            app:layout_constraintTop_toTopOf="@+id/tv_ordr_sum_value" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="#7CA09D"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ordr_sum_value" />
+
+
+        <TextView
+            android:id="@+id/tv_margin_used"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Margin Used"
+            android:textColor="#89A0AE"
+            android:textSize="14sp"
+            android:layout_margin="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+        <TextView
+            android:id="@+id/tv_24th_turnOver_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹ 22,26,100.90"
+            android:textColor="#DBE7FF"
+            android:textSize="12sp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_margin_used"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_margin_used" />
+
+        <TextView
+            android:id="@+id/tv_date_time_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date and Time"
+            android:textColor="#89A0AE"
+            android:textSize="14sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_margin_used" />
+
+        <TextView
+            android:id="@+id/tv_date_time_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18 Aug 2023,  20:00 PM"
+            android:textColor="#DBE7FF"
+            android:textSize="12sp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_date_time_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_date_time_title" />
+
+        <TextView
+            android:id="@+id/tv_est_liqu_price_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Est Liquidation Price"
+            android:textColor="#89A0AE"
+            android:textSize="14sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date_time_title" />
+
+        <TextView
+            android:id="@+id/tv_est_liqu_price_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹ 22,26,100.90"
+            android:textColor="#DBE7FF"
+            android:textSize="12sp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_est_liqu_price_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_est_liqu_price_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <CheckBox
+        android:id="@+id/cb_ordr_sum_dnt_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do not show me again. "
+        android:textColor="#EBF1FF"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+    <Button
+        android:id="@+id/btnCancelOrdrSum"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Cancel"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnConfirmOrdrSum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_ordr_sum_dnt_show" />
+
+    <Button
+        android:id="@+id/btnConfirmOrdrSum"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Confirm"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCancelOrdrSum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnCancelOrdrSum"
+        app:layout_constraintTop_toTopOf="@+id/btnCancelOrdrSum" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
