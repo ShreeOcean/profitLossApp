@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#101314">
+
+    <TextView
+        android:id="@+id/tv_cross_coin_info"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+        android:drawableEnd="@drawable/cross_icon"
+        android:gravity="center|fill"
+        android:text="Funding Rate"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="#33424B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cross_coin_info" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/bg_tv_fill_border"
+                android:padding="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_fund_rate_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The funding rate is a mechanism used in perpetual crypto futures contracts to align the price of the contract with the underlying asset’s spot price."
+                    android:textColor="#DBE7FF"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_intrvl_title"
+                android:layout_width="203dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Interval"
+                android:textAlignment="center"
+                android:textColor="#89A0AE"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+            <TextView
+                android:id="@+id/tv_last_fund_title"
+                android:layout_width="203dp"
+                android:layout_height="wrap_content"
+                android:text="Last Funding Rate"
+                android:textAlignment="center"
+                android:textColor="#89A0AE"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_intrvl_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_intrvl_title"
+                app:layout_constraintTop_toTopOf="@+id/tv_intrvl_title" />
+
+            <TextView
+                android:id="@+id/tv_intrvl_body"
+                android:layout_width="203dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Every 8 Hours"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_intrvl_title"
+                app:layout_constraintStart_toStartOf="@+id/tv_intrvl_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_intrvl_title" />
+
+            <TextView
+                android:id="@+id/tv_last_fund_body"
+                android:layout_width="203dp"
+                android:layout_height="wrap_content"
+                android:text="0.0100%"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_intrvl_body"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_intrvl_body"
+                app:layout_constraintTop_toTopOf="@+id/tv_intrvl_body" />
+
+            <TextView
+                android:id="@+id/tv_countDown_title"
+                android:layout_width="203dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Countdown"
+                android:textAlignment="center"
+                android:textColor="#89A0AE"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_intrvl_body" />
+
+            <TextView
+                android:id="@+id/tv_next_fund_title"
+                android:layout_width="203dp"
+                android:layout_height="wrap_content"
+                android:text="Est. Next Funding Rate"
+                android:textAlignment="center"
+                android:textColor="#89A0AE"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_countDown_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_countDown_title"
+                app:layout_constraintTop_toTopOf="@+id/tv_countDown_title" />
+
+            <TextView
+                android:id="@+id/tv_countDown_body"
+                android:layout_width="203dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="08:00:00"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_countDown_title"
+                app:layout_constraintStart_toStartOf="@+id/tv_countDown_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_countDown_title" />
+
+            <TextView
+                android:id="@+id/tv_next_fund_body"
+                android:layout_width="203dp"
+                android:layout_height="wrap_content"
+                android:text="0.0100%"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_countDown_body"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_countDown_body"
+                app:layout_constraintTop_toTopOf="@+id/tv_countDown_body" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_fund_mecha"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/bg_tv_fill_border"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_countDown_body">
+
+                <TextView
+                    android:id="@+id/tv_fund_mecha"
+                    android:layout_width="204dp"
+                    android:layout_height="wrap_content"
+                    android:text="Funding Mechanism"
+                    android:textColor="#DBE7FF"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgBtnDropDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_arrow_drop_down_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_fund_mecha"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_fund_mecha" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/bg_tv_fill_border"
+                android:padding="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_fund_mecha">
+
+
+                <TextView
+                    android:id="@+id/tvT1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="If funding rate is"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvT2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Positive"
+                    android:textColor="#0AC280"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/tvT1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_long"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:background="#1A0AC280"
+                    android:paddingStart="15dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="15dp"
+                    android:text="Long"
+                    android:textColor="#0AC280"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvT1" />
+
+                <TextView
+                    android:id="@+id/tv_paysTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:drawableBottom="@drawable/long_right_arrow"
+                    android:padding="5dp"
+                    android:text="pays to"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_long"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_short"
+                    app:layout_constraintStart_toEndOf="@+id/tv_long"
+                    app:layout_constraintTop_toTopOf="@+id/tv_long" />
+
+                <TextView
+                    android:id="@+id/tv_short"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:background="#1AF35A38"
+                    android:text="Short"
+                    android:textColor="#F35A38"
+                    android:textSize="16sp"
+                    android:paddingStart="15dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="15dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_paysTo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_paysTo" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="position holder"
+                    android:textColor="@color/white"
+                    android:textSize="9sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_long"
+                    app:layout_constraintStart_toStartOf="@+id/tv_long"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_long" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="position holder"
+                    android:textColor="@color/white"
+                    android:textSize="9sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_short"
+                    app:layout_constraintStart_toStartOf="@+id/tv_short"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_short" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹"
+                    android:textColor="#DBE7FF"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_paysTo"
+                    app:layout_constraintStart_toStartOf="@+id/tv_paysTo"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_paysTo" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/bg_tv_fill_border"
+                android:padding="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+
+                <TextView
+                    android:id="@+id/tvT3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="If funding rate is"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvT4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Positive"
+                    android:textColor="#0AC280"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/tvT3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_long1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:background="#1A0AC280"
+                    android:paddingStart="15dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="15dp"
+                    android:text="Long"
+                    android:textColor="#0AC280"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvT3" />
+
+                <TextView
+                    android:id="@+id/tv_paysTo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:drawableBottom="@drawable/long_left_arrow"
+                    android:padding="5dp"
+                    android:text="pays to"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_long1"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_short1"
+                    app:layout_constraintStart_toEndOf="@+id/tv_long1"
+                    app:layout_constraintTop_toTopOf="@+id/tv_long1" />
+
+                <TextView
+                    android:id="@+id/tv_short1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:background="#1AF35A38"
+                    android:text="Short"
+                    android:textColor="#F35A38"
+                    android:textSize="16sp"
+                    android:paddingStart="15dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="15dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_paysTo2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_paysTo2" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="position holder"
+                    android:textColor="@color/white"
+                    android:textSize="9sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_long1"
+                    app:layout_constraintStart_toStartOf="@+id/tv_long1"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_long1" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="position holder"
+                    android:textColor="@color/white"
+                    android:textSize="9sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_short1"
+                    app:layout_constraintStart_toStartOf="@+id/tv_short1"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_short1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹"
+                    android:textColor="#DBE7FF"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_paysTo2"
+                    app:layout_constraintStart_toStartOf="@+id/tv_paysTo2"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_paysTo2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/btn_fund_rate_ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Okay"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
