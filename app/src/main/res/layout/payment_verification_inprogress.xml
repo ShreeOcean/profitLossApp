@@ -6,6 +6,15 @@
     android:layout_height="wrap_content"
     android:background="@drawable/bg_tv_fill_border">
 
+    <ImageView
+        android:id="@+id/img_cross_pay_verifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:src="@drawable/grey_cross_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView8"
         android:layout_width="0dp"
@@ -51,6 +60,7 @@
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/blue_dot_icon"
         android:drawablePadding="10dp"
+        android:layout_marginStart="10dp"
         android:text="3 Oct’23, 1:22 pm"
         android:textColor="#89A0AE"
         android:textSize="12sp"
