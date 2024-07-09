@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#101314"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What is UTR?"
+        android:textColor="#DBE7FF"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="82dp"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/textView28"
+        app:layout_constraintStart_toStartOf="@+id/textView28"
+        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Enter the UTR ID for this transaction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_et_fill"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView27">
+
+        <EditText
+            android:id="@+id/et_input_amt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="500"
+            android:text="Ex-XXXX783423XXXXXXX"
+            android:textColor="#14181A"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HDFC Bank"
+        android:textColor="@color/white"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/bank_logo_hdfc"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView25"
+        app:layout_constraintStart_toEndOf="@+id/textView25"
+        app:layout_constraintTop_toTopOf="@+id/textView25" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="via"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:textColor="#89A0AE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₹500.00"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Depositing Amount "
+        android:textSize="14sp"
+        android:textColor="#89A0AE"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ord_id_depo_amt" />
+
+    <TextView
+        android:id="@+id/tv_ord_id_depo_amt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Order ID: 24a34783"
+        android:textColor="#40535E"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_cross_prim_upi_id"
+        app:layout_constraintEnd_toStartOf="@+id/img_cross_prim_upi_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_cross_prim_upi_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/grey_cross_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnGoBack_depo_amt"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Go Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnConfirm_depo_amt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <Button
+        android:id="@+id/btnConfirm_depo_amt"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="@+id/btnGoBack_depo_amt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnGoBack_depo_amt"
+        app:layout_constraintTop_toTopOf="@+id/btnGoBack_depo_amt" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
