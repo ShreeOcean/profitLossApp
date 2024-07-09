@@ -7,6 +7,18 @@
     android:background="#101314">
 
     <TextView
+        android:id="@+id/tv_trouble_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Having trouble? Try manual method"
+        android:textSize="14sp"
+        android:textColor="#DBE7FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_margin_ok" />
+
+    <TextView
         android:id="@+id/tv_back_deposit"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
@@ -29,6 +41,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_back_deposit" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#DBE7FF"
+        app:layout_constraintEnd_toEndOf="@+id/tv_trouble_help"
+        app:layout_constraintStart_toStartOf="@+id/tv_trouble_help"
+        app:layout_constraintTop_toBottomOf="@+id/tv_trouble_help" />
 
     <ImageView
         android:id="@+id/iv_btn_video_play"
@@ -255,5 +276,6 @@
         android:text="Okay"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_ads" />
 </androidx.constraintlayout.widget.ConstraintLayout>
