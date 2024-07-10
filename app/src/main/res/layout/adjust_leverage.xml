@@ -81,16 +81,49 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <SeekBar
+        android:id="@+id/seekBar_adjust_leverage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:max="50"
+        android:progress="0"
+        android:outlineSpotShadowColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/cl_realize_amt"
+        app:layout_constraintStart_toStartOf="@+id/cl_realize_amt"
+        app:layout_constraintTop_toBottomOf="@+id/cl_realize_amt" />
+
     <TextView
-        android:id="@+id/tv_dummy"
+        android:id="@+id/tv_0percent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="set the bar over here"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cl_realize_amt" />
+        android:text="0%"
+        android:textColor="#EBF1FF"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/seekBar_adjust_leverage"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_adjust_leverage" />
+
+    <TextView
+        android:id="@+id/tv_10percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10%"
+        android:textColor="#EBF1FF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/seekBar_adjust_leverage"
+        app:layout_constraintStart_toStartOf="@+id/seekBar_adjust_leverage"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_adjust_leverage" />
+
+    <TextView
+        android:id="@+id/tv_50percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50%"
+        android:textColor="#EBF1FF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/seekBar_adjust_leverage"
+        app:layout_constraintTop_toTopOf="@+id/tv_10percent" />
+
 
     <TextView
         android:id="@+id/tv_maxPositnCurntLev"
@@ -101,7 +134,7 @@
         android:textColor="#B3B3B3"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_dummy" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_50percent" />
 
     <TextView
         android:id="@+id/tv_maxPositnCurntLevAmt"
