@@ -289,6 +289,7 @@
         android:layout_height="50dp"
         android:text="Cancel"
         android:layout_margin="20dp"
+        android:theme="@style/outlined_button"
         app:layout_constraintEnd_toStartOf="@+id/btnConfirmOrdrSum"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cb_ordr_sum_dnt_show" />
@@ -299,6 +300,7 @@
         android:layout_height="50dp"
         android:text="Confirm"
         android:layout_marginEnd="20dp"
+        android:theme="@style/solid_button"
         app:layout_constraintBottom_toBottomOf="@+id/btnCancelOrdrSum"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnCancelOrdrSum"

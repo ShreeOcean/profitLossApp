@@ -163,9 +163,10 @@
     <Button
         android:id="@+id/btn_close_pay_in_progress"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_margin="30dp"
         android:text="Confirm"
+        android:theme="@style/solid_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

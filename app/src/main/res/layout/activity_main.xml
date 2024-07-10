@@ -259,6 +259,16 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <ImageView
+        android:id="@+id/img_graph"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/graph_img"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/cl_realize_amt"
+        app:layout_constraintStart_toStartOf="@+id/cl_realize_amt"
+        app:layout_constraintTop_toBottomOf="@+id/cl_realize_amt" />
+
     <LinearLayout
         android:layout_width="204dp"
         android:layout_height="wrap_content"
@@ -313,7 +323,7 @@
         android:background="#616161"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cl_realize_amt" />
+        app:layout_constraintTop_toBottomOf="@+id/img_graph" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout4"
@@ -443,6 +453,7 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:text="Reset"
+        android:theme="@style/outlined_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnConfirm"
         app:layout_constraintStart_toStartOf="parent"
@@ -453,6 +464,7 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:text="Confirm"
+        android:theme="@style/solid_button"
         app:layout_constraintBottom_toBottomOf="@+id/btnReset"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnReset"
